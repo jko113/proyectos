@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    /* background-color: #999; */
+    background-image: url(../images/baguette.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: darkgrey;
+}
+
+#header-container {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+#proyecto {
+    font-size: 1.5rem;
+    padding-left: 25px;
+}
+
+#header-right {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: initial;
+    padding-right: 25px;
+    overflow: none;
+    
+}
+
+#hamburger {
+    font-size: 1.5rem;
+}
+
+.menu {
+    background-color: rgb(243, 193, 82);
+    height: 160px;
+    width: 160px;
+    margin-right: 7px;
+    margin-top: 5px;
+    transition: height 1s linear;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid green; */
+}
+
+.hidden {
+    z-index: -1;
+    height: 10px;
+    transition: height 1s linear, z-index 50ms linear 1s;
+}
+
+.menu-item {
+    flex: 1;
+    padding-left: 10px;
+    border: 1px solid gray;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:last-child {
+    border-bottom: 1px solid gray;
+}
+
+.hidden .menu-item {
+    z-index: -1;
+    transition: z-index 50ms linear 1s, opacity 600ms linear /*.6s*/;
+    opacity: 0;
+}
+
+.menu-item:hover {
+    /* background-color: rgba(61,29,30,0.5); */
+    background-color: rgba(95,145,76,0.7);
+}
